@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import { BuildCompliment } from './Complimenter';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // Background is the parent element
+    <div className='App-background'>
+
+      <div className='App-title'> Welcome to the <br/> Knope Complimenter! </div>
+      <div className='App-subtitle'> Gas up your friend à la Leslie Knope </div>
+        
+      {/* Generate compliment */}
+      <BuildCompliment />
+      
     </div>
   );
 }

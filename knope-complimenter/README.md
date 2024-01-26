@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# knope-complimenter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Leslie Knope Complimenter! This machine will help you pump your friend up with the perfect praise!
 
-## Available Scripts
+This random compliment generator embodies the spirit of Leslie and Ann's friendship from the show Parks and Recreation. Further details are elaborated in the References section.
 
-In the project directory, you can run:
+# References
 
-### `npm start`
+https://www.youtube.com/watch?v=_Ary8arWND8
+https://www.youtube.com/watch?v=l6wRR35LGVA
+https://www.youtube.com/watch?v=Su9bxtBh3ug
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+And general (bordering on manic) viewing of Parks & Recreation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Aim of the game
+Generate a compliment meant for a friend. Compliments must praise behavioral traits through metaphors related to strength, intelligence, work ethic, beauty, etc. 
 
-### `npm test`
+Users can enter their own friend's names and professions to generate a personalized compliment. If none are provided, the beautiful land-mermaid that is Ann Perkins receives more accolades. But beware! like life, sometimes, instead of a compliment, you may be handed a lemon in the form of April Ludgate (scary) or Jerry Gergich (useless).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Compliment formats
 
-### `npm run build`
+By now, you may be aware that these compliments are an assortment of adjectives, nouns, natural phenomena, etc strung together seemingly randomly. I have chosen to employ the following formats to delve into the art of the metaphor and generate compliments:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+(all properties in <> are to be randomly assigned)
+1) <cute adjective>, <strong adjective>, <behavior> <cute/strong animal>
+2) <adjective> <ecosystem>-<mythical being>
+3) <adjective>, <behavior> <inanimate object> come to life
+4) <adjective>, <adjective> <profession>
+5) <adjective>, <adjective>, <flower>
+6) <infuser>-infused <infusee/dessert>
+7) Analagous comparisons:
+    Lord of the Rings is the <person> of novels. 
+    Waffles are the <person> of breakfast foods.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Where appropriate, <person> is prefixed/suffixed/inserted.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Note: As the aim is to generate compliments randomly, the format is also chosen randomly.
 
-### `npm run eject`
+# API usage
+The Merriam Webster Thesaurus API is employed to fetch synonyms for the adjectives mentioned above. Other compliment properties are randomly selected from hardcoded lists.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Image usage
+Images are stored in the repo and pulled randomly.
