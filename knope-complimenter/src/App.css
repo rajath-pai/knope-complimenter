@@ -148,6 +148,19 @@ img {
   color: greenyellow;
 }
 
+.random-words-adj{
+  color: greenyellow;
+}
+
 .random-bad-words{
   color: pink;
+}
+
+.word-replacer {
+  background: beige;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: chartreuse;
+  align-content: center;
+  text-align: center;
 }

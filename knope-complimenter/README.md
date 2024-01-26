@@ -17,6 +17,11 @@ Generate a compliment meant for a friend. Compliments must praise behavioral tra
 
 Users can enter their own friend's names and professions to generate a personalized compliment. If none are provided, the beautiful land-mermaid that is Ann Perkins receives more accolades. But beware! like life, sometimes, instead of a compliment, you may be handed a lemon in the form of April Ludgate (scary) or Jerry Gergich (useless).
 
+# How to use
+On launching the webpage, click on the "Click to get compliment!" button to generate a compliment. Compliments falls into seven different categories/formats outlined in the next section.
+
+Use the text boxes provided to personalize compliments for your friend. But, there's also a chance to generate something nasty so keep trying. In addition, on some compliments, you may hover (move your mouse back and forth) over a box shown to replace adjectives in your compliments with their synonyms. But, this too can quickly go awry because remember the complimenter only aids you, you know your friend the best!
+
 # Compliment formats
 
 By now, you may be aware that these compliments are an assortment of adjectives, nouns, natural phenomena, etc strung together seemingly randomly. I have chosen to employ the following formats to delve into the art of the metaphor and generate compliments:
@@ -37,7 +42,10 @@ Where appropriate, <person> is prefixed/suffixed/inserted.
 Note: As the aim is to generate compliments randomly, the format is also chosen randomly.
 
 # API usage
-The Merriam Webster Thesaurus API is employed to fetch synonyms for the adjectives mentioned above. Other compliment properties are randomly selected from hardcoded lists.
+The Merriam Webster Thesaurus API is employed to fetch synonyms for the adjectives mentioned above. 
+Other compliment properties are randomly selected from hardcoded lists.
+
+Compliment category/format is also selected randomly.
 
 # Image usage
 Images are stored in the repo and pulled randomly.

@@ -91,14 +91,16 @@ function CompFormatOne() {
     let behaviorNum = randomNumberInRange(0, behaviors.length-1);
     let animalNum = randomNumberInRange(0, animals.length-1);
 
-    let adj1 = <span class="random-words">{seedAdjectives[adj1Num]}</span>;
-    let adj2 = <span class="random-words">{seedAdjectives[adj2Num]}</span>;
-    let behavior = <span class="random-words">{behaviors[behaviorNum]}</span>;
-    let animal = <span class="random-words">{animals[animalNum]}</span>;
+    let adj1 = <span className="random-words-adj">{seedAdjectives[adj1Num]}</span>;
+    let adj2 = <span className="random-words-adj">{seedAdjectives[adj2Num]}</span>;
+    let behavior = <span className="random-words">{behaviors[behaviorNum]}</span>;
+    let animal = <span className="random-words">{animals[animalNum]}</span>;
+
+    document.getElementById("word-replacer").click = true;
 
     return (
         <div>
-            <h2 class='Comp-text'>
+            <h2 className='Comp-text'>
                 {User.name}, you {adj1}, {adj2}, {behavior} {animal}. </h2>
         </div>
     );
@@ -111,13 +113,15 @@ function CompFormatTwo() {
     let beingNum = randomNumberInRange(0, mythicalBeings.length-1);
 
     
-    let adj = <span class="random-words">{seedAdjectives[adjNum]}</span>;
-    let ecosystem = <span class="random-words">{ecosystems[ecosystemNum]}</span>;
-    let being = <span class="random-words">{mythicalBeings[beingNum]}</span>;
+    let adj = <span className="random-words-adj">{seedAdjectives[adjNum]}</span>;
+    let ecosystem = <span className="random-words">{ecosystems[ecosystemNum]}</span>;
+    let being = <span className="random-words">{mythicalBeings[beingNum]}</span>;
+
+    document.getElementById("word-replacer").click = true;
 
     return (
         <div>
-            <h2 class='Comp-text'>
+            <h2 className='Comp-text'>
                 {User.name}, you {adj}, {ecosystem}-{being}.</h2>
         </div>
     );
@@ -129,13 +133,15 @@ function CompFormatThree() {
     let behaviorNum = randomNumberInRange(0, behaviors.length-1);
     let objNum = randomNumberInRange(0, inanimateObjects.length-1);
 
-    let adj = <span class="random-words">{seedAdjectives[adjNum]}</span>;
-    let behavior = <span class="random-words">{behaviors[behaviorNum]}</span>;
-    let obj = <span class="random-words">{inanimateObjects[objNum]}</span>;
+    let adj = <span className="random-words-adj">{seedAdjectives[adjNum]}</span>;
+    let behavior = <span className="random-words">{behaviors[behaviorNum]}</span>;
+    let obj = <span className="random-words">{inanimateObjects[objNum]}</span>;
+
+    document.getElementById("word-replacer").click = true;
 
     return (
         <div>
-            <h2 class='Comp-text'>
+            <h2 className='Comp-text'>
                 {User.name}, you {adj}, {behavior} {obj} come to life. </h2>
         </div>
     );
@@ -147,13 +153,13 @@ function CompFormatFour() {
     let adj2Num = randomNumberInRange(0, seedAdjectives.length-1);
 
     
-    let adj1 = <span class="random-words">{seedAdjectives[adj1Num]}</span>;
-    let adj2 = <span class="random-words">{seedAdjectives[adj2Num]}</span>;
-    let profession = <span class="random-words">{User.profession}</span>;
+    let adj1 = <span className="random-words-adj">{seedAdjectives[adj1Num]}</span>;
+    let adj2 = <span className="random-words">{seedAdjectives[adj2Num]}</span>;
+    let profession = <span className="random-words">{User.profession}</span>;
 
     return (
         <div>
-            <h2 class='Comp-text'>
+            <h2 className='Comp-text'>
                 {User.name}, you {adj1}, {adj2} {profession}. </h2>
         </div>
     );
@@ -165,13 +171,13 @@ function CompFormatFive() {
     let adj2Num = randomNumberInRange(0, seedAdjectives.length-1);
     let flowerNum = randomNumberInRange(0, flowers.length-1);
 
-    let adj1 = <span class="random-words">{seedAdjectives[adj1Num]}</span>;
-    let adj2 = <span class="random-words">{seedAdjectives[adj2Num]}</span>;
-    let flower = <span class="random-words">{flowers[flowerNum]}</span>;
+    let adj1 = <span className="random-words-adj">{seedAdjectives[adj1Num]}</span>;
+    let adj2 = <span className="random-words-adj">{seedAdjectives[adj2Num]}</span>;
+    let flower = <span className="random-words">{flowers[flowerNum]}</span>;
 
     return (
         <div>
-            <h2 class='Comp-text'>
+            <h2 className='Comp-text'>
                 {User.name}, you {adj1}, {adj2} {flower}. </h2>
         </div>
     );
@@ -182,12 +188,12 @@ function CompFormatSix() {
     let infuserNum = randomNumberInRange(0, infusers.length-1);
     let infuseeNum = randomNumberInRange(0, infusees.length-1);
 
-    let infuser = <span class="random-words">{infusers[infuserNum]}</span>;
-    let infusee = <span class="random-words">{infusees[infuseeNum]}</span>;
+    let infuser = <span className="random-words">{infusers[infuserNum]}</span>;
+    let infusee = <span className="random-words">{infusees[infuseeNum]}</span>;
 
     return (
         <div>
-            <h2 class='Comp-text'>{User.name}, you {infuser}-infused {infusee}. </h2>
+            <h2 className='Comp-text'>{User.name}, you {infuser}-infused {infusee}. </h2>
         </div>
     );
 }
@@ -201,7 +207,7 @@ function CompFormatSeven() {
 
     return (
         <div>
-            <h2 class='Comp-text'> <span class="random-words">{goodAnalogyPairs[analogyKey]}</span> is the <span class="random-words">{User.name}</span> of <span class="random-words">{analogyKey}</span>. </h2>
+            <h2 className='Comp-text'> <span className="random-words">{goodAnalogyPairs[analogyKey]}</span> is the <span className="random-words">{User.name}</span> of <span className="random-words">{analogyKey}</span>. </h2>
         </div>
     );
 }
@@ -212,8 +218,8 @@ function CompFormatJerry() {
 
     return (
         <div>
-            <h2 class='Comp-text'> You got a Jerry GIF so here's an insult instead! <br/>
-            <span class="random-bad-words">{badAnalogyPairs[analogyKey]}</span> is the <span class="random-bad-words">{User.name}</span> of <span class="random-bad-words">{analogyKey}</span>. </h2>
+            <h2 className='Comp-text'> You got a Jerry GIF so here's an insult instead! <br/>
+            <span className="random-bad-words">{badAnalogyPairs[analogyKey]}</span> is the <span className="random-bad-words">{User.name}</span> of <span className="random-bad-words">{analogyKey}</span>. </h2>
         </div>
     );
 }
@@ -221,7 +227,7 @@ function CompFormatJerry() {
 function CompFormatJamm() {
     return (
         <div>
-            <h2 class='Comp-text'> You've been JAMMED! </h2>
+            <h2 className='Comp-text'> You've been JAMMED! </h2>
         </div>
     );
 }
@@ -229,7 +235,7 @@ function CompFormatJamm() {
 function CompFormatApril() {
     return (
         <div>
-            <h2 class='Comp-text'> Keep trying... nothing to see here. </h2>
+            <h2 className='Comp-text'> Keep trying... nothing to see here.</h2>
         </div>
     );
 }
@@ -308,7 +314,7 @@ function SetImage() {
     cimg.name = require("./image_set/"+images[imgNum]);
 
     return(
-        <div class='column'>
+        <div className='column'>
           <img src={cimg.name} alt="img" />
         </div>
     );
@@ -318,25 +324,36 @@ export function BuildCompliment() {
     const [formatNum, setFormatNum] = useState(0);
     const handleClick = () => {
         setFormatNum(randomNumberInRange(0, 6));
+        document.getElementById("word-replacer").hidden = true;
     };
+
+    const handleWordReplacer = () => {
+        // if adjectives are present, allow replace feature.
+        let adj_word_set = document.getElementsByClassName("random-words-adj");
+        if (adj_word_set.length > 0) {
+            document.getElementById("word-replacer").hidden = false;
+        }
+    }
     formatNum_ = formatNum;
 
     imgNum = randomNumberInRange(0, images.length-1);
 
     return (
-        <div class='Compliment-container' id="compliment-container" >
-            <div class="column">
+        <div className='Compliment-container' id="compliment-container" onMouseOver={handleWordReplacer}>
+            <div className="column">
+
+                <YourThesaurusComponent />
                 
                 <ComplimentGenerator />
                 <div>
-                    <button class="button" onClick={handleClick} id="generate-button">
+                    <button className="button" onClick={handleClick} id="generate-button">
                         Click to get compliment!
                     </button>
                 </div>
 
             </div>
             
-            <div class="column">
+            <div className="column">
                 <SetImage />
             </div>
         </div>
