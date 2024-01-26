@@ -15,7 +15,7 @@ function App() {
         </label>
         <br/>
 
-        <label> Enter a friend's profession:
+        <label> Enter the friend's profession:
           <input type="text" onChange={(e) => User.profession = e.target.value} />
         </label>
       </div>
