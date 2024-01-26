@@ -1,16 +1,28 @@
 {
   "files": {
-    "main.css": "/knope-complimenter/static/css/main.f855e6bc.css",
-    "main.js": "/knope-complimenter/static/js/main.10ecbfd8.js",
+    "main.css": "/knope-complimenter/static/css/main.30d13c1f.css",
+    "main.js": "/knope-complimenter/static/js/main.7bdf2adb.js",
     "static/js/787.0181021d.chunk.js": "/knope-complimenter/static/js/787.0181021d.chunk.js",
-    "static/media/logo.svg": "/knope-complimenter/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/jerry_gif.gif": "/knope-complimenter/static/media/jerry_gif.b8ad9d262a458e5fe0c6.gif",
+    "static/media/gif_02.gif": "/knope-complimenter/static/media/gif_02.cc3d1aa9133e587f1fc1.gif",
+    "static/media/gif_01.gif": "/knope-complimenter/static/media/gif_01.68dc4438f5c3fdee2b56.gif",
+    "static/media/gif_04.gif": "/knope-complimenter/static/media/gif_04.7612e1cd0f2c23557536.gif",
+    "static/media/jamm_gif.gif": "/knope-complimenter/static/media/jamm_gif.8891dde25c912a11ec26.gif",
+    "static/media/gif_03.gif": "/knope-complimenter/static/media/gif_03.88d3c4ab12f07821c6be.gif",
+    "static/media/Pawnee-City-Hall_background.png": "/knope-complimenter/static/media/Pawnee-City-Hall_background.04112a6985a21d0cc257.png",
+    "static/media/april_gif.gif": "/knope-complimenter/static/media/april_gif.37471e1e9bd14e5667a9.gif",
+    "static/media/image_04.jpg": "/knope-complimenter/static/media/image_04.209290e9a7072fd7c093.jpg",
+    "static/media/image_01.jfif": "/knope-complimenter/static/media/image_01.a06a9cd34d98e2f831ea.jfif",
+    "static/media/font.otf": "/knope-complimenter/static/media/font.bad56dc76ad017fdccf4.otf",
+    "static/media/image_03.jpg": "/knope-complimenter/static/media/image_03.5a0b55a829de644be635.jpg",
+    "static/media/image_02.webp": "/knope-complimenter/static/media/image_02.6f6f97ef27d878610dd7.webp",
     "index.html": "/knope-complimenter/index.html",
-    "main.f855e6bc.css.map": "/knope-complimenter/static/css/main.f855e6bc.css.map",
-    "main.10ecbfd8.js.map": "/knope-complimenter/static/js/main.10ecbfd8.js.map",
+    "main.30d13c1f.css.map": "/knope-complimenter/static/css/main.30d13c1f.css.map",
+    "main.7bdf2adb.js.map": "/knope-complimenter/static/js/main.7bdf2adb.js.map",
     "787.0181021d.chunk.js.map": "/knope-complimenter/static/js/787.0181021d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.10ecbfd8.js"
+    "static/css/main.30d13c1f.css",
+    "static/js/main.7bdf2adb.js"
   ]
 }
