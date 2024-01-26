@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/knope-complimenter/static/css/main.30d13c1f.css",
-    "main.js": "/knope-complimenter/static/js/main.7bdf2adb.js",
+    "main.js": "/knope-complimenter/static/js/main.040287ff.js",
     "static/js/787.0181021d.chunk.js": "/knope-complimenter/static/js/787.0181021d.chunk.js",
     "static/media/jerry_gif.gif": "/knope-complimenter/static/media/jerry_gif.b8ad9d262a458e5fe0c6.gif",
     "static/media/gif_02.gif": "/knope-complimenter/static/media/gif_02.cc3d1aa9133e587f1fc1.gif",
@@ -18,11 +18,11 @@
     "static/media/image_02.webp": "/knope-complimenter/static/media/image_02.6f6f97ef27d878610dd7.webp",
     "index.html": "/knope-complimenter/index.html",
     "main.30d13c1f.css.map": "/knope-complimenter/static/css/main.30d13c1f.css.map",
-    "main.7bdf2adb.js.map": "/knope-complimenter/static/js/main.7bdf2adb.js.map",
+    "main.040287ff.js.map": "/knope-complimenter/static/js/main.040287ff.js.map",
     "787.0181021d.chunk.js.map": "/knope-complimenter/static/js/787.0181021d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30d13c1f.css",
-    "static/js/main.7bdf2adb.js"
+    "static/js/main.040287ff.js"
   ]
 }
