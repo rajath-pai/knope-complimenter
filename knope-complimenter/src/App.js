@@ -1,5 +1,5 @@
 import './App.css';
-import { BuildCompliment } from './Complimenter';
+import { BuildCompliment, User } from './Complimenter';
 
 function App() {
   return (
@@ -8,10 +8,21 @@ function App() {
 
       <div className='App-title'> Welcome to the <br/> Knope Complimenter! </div>
       <div className='App-subtitle'> Gas up your friend à la Leslie Knope </div>
+
+      <div className='Input-fields'>
+        <label> Enter a friend's name:
+          <input type="text" onChange={(e) => User.name = e.target.value}/>
+        </label>
+        <br/>
+
+        <label> Enter a friend's profession:
+          <input type="text" onChange={(e) => User.profession = e.target.value} />
+        </label>
+      </div>
         
       {/* Generate compliment */}
       <BuildCompliment />
-      
+
     </div>
   );
 }

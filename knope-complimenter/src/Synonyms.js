@@ -1,44 +1,49 @@
+// Used to fetch synonyms of words from Merriam Webster using the Thesaurus API.
+
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Synonyms = () => {
-  const [word, setWord] = useState('');
-  const [synonyms, setSynonyms] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  const fetchSynonyms = async () => {
-    try {
-      setLoading(true);
-
-      const apiKey = 'YOUR_MERRIAM_WEBSTER_API_KEY';
-      const response = await axios.get(`https://www.dictionaryapi.com/api/v3/references/thesaurus/json/${word}?key=${apiKey}`);
-
-      // Parse the response to extract synonyms
-      const fetchedSynonyms = response.data[0]?.meta?.syns[0] || [];
-      setSynonyms(fetchedSynonyms);
-    } catch (error) {
-      console.error('Error fetching synonyms:', error);
-    } finally {
-      setLoading(false);
+const YourThesaurusComponent = () => {
+    const [word, setWord] = useState('');
+    const [synonyms, setSynonyms] = useState([]);
+    const [loading, setLoading] = useState(false);
+  
+    const fetchSynonyms = async () => {
+      try {
+        setLoading(true);
+  
+        const apiKey = '178b06b1-1acc-4e05-8182-e2870e4228e9';
+        
+        const response = await axios.get(`https://www.dictionaryapi.com/api/v3/references/thesaurus/json/${word}?key=${apiKey}`);
+  
+        console.log(response);
+  
+        // Parse the response to extract synonyms
+        const fetchedSynonyms = response.data[0]?.meta?.syns[0] || [];
+        console.log("Synonyms:", fetchedSynonyms);
+        setSynonyms(fetchedSynonyms);
+      } catch (error) {
+        console.error('Error fetching synonyms:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+  
+    const handleClickWord = () => {
+        console.log("RAJATH");
+      let my_word = document.getElementById("my_word").innerText.toString();
+      console.log("RAJATH", document.getElementById("my_word").innerText.toString());
+      setWord({my_word});
+      fetchSynonyms();
     }
+  
+    return (
+      <div>
+        <button onClick={handleClickWord} disabled={loading}>
+        </button>
+        <p>{synonyms}</p>
+      </div>
+    );
   };
 
-  return (
-    <div>
-      <label>
-        Enter a word:
-        <input type="text" value={word} onChange={(e) => setWord(e.target.value)} />
-      </label>
-      <button onClick={fetchSynonyms} disabled={loading}>
-        {loading ? 'Fetching Synonyms...' : 'Fetch Synonyms'}
-      </button>
-      <ul>
-        {synonyms.map((synonym, index) => (
-          <li key={index}>{synonym}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-export default SynonymsComponent;
+  export default YourThesaurusComponent;

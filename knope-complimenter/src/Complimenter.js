@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import axios from 'axios';
+import YourThesaurusComponent from "./Synonyms";
 
-let user = {
+export let User = {
     name: "Ann",
     profession: "nurse",
 };
@@ -17,7 +17,7 @@ let imgNum = -1;
 
 const GoodGreen = `rgba(25, 77, 51, 0.88)`;
 
-const BadRed = `rgba(220, 0, 0, 0.88)`;
+const BadRed = `rgba(220, 0, 0, 0.6)`;
 
 /*
 
@@ -42,7 +42,7 @@ Where appropriate, <person> is prefixed/suffixed/inserted.
 const seedAdjectives = ["strong", "opalescent", "sassy", "noble", "tricky", "sophisticated", "elegant", "powerful", "brilliant", "talented", "sweet", "glowing", "thoughtful", "cute", "intelligent", "funny", "dutiful", "loyal", "clever", "hard-working", "wily", "silly"];
 
 // Behaviors
-const behaviors = ["rule-breaking", "rebellion-starting", "noise-making"];
+const behaviors = ["rule-breaking", "rebellion-starting", "good-trouble-making"];
 
 // Cute/strong animals
 const animals = ["red panda", "quokka", "sand cat", "raccoon", "koala bear", "humming bird", "baby-eating dingo", "miniature pig", "labrador-in-training", "honey badger", "musk ox", "elephant", "grizzly bear", "tiger", "lion", "leafcutter ant", "jaguar", "hippopotamus", "gorilla"];
@@ -53,7 +53,7 @@ const ecosystems = ["forest", "land", "ocean", "desert", "tundra"];
 // Mythical Beings
 const mythicalBeings = ["mermaid", "unicorn", "sunfish", "goddess", "lioness", "samurai", "phoenix", "minx", "sun-goddess", "dragon", "Chimaera"];
 
-const inanimateObjects = ["marble statue", "suit of armor", "Academy Award"];
+const inanimateObjects = ["marble statue", "suit of armor", "oil painting"];
 
 const flowers = ["sunflower", "daffodil", "lily", "snapdragon"];
 
@@ -91,11 +91,15 @@ function CompFormatOne() {
     let behaviorNum = randomNumberInRange(0, behaviors.length-1);
     let animalNum = randomNumberInRange(0, animals.length-1);
 
+    let adj1 = <span class="random-words">{seedAdjectives[adj1Num]}</span>;
+    let adj2 = <span class="random-words">{seedAdjectives[adj2Num]}</span>;
+    let behavior = <span class="random-words">{behaviors[behaviorNum]}</span>;
+    let animal = <span class="random-words">{animals[animalNum]}</span>;
+
     return (
         <div>
             <h2 class='Comp-text'>
-                {user.name}, you {seedAdjectives[adj1Num]}, 
-                 {seedAdjectives[adj2Num]}, {behaviors[behaviorNum]} {animals[animalNum]}. </h2>
+                {User.name}, you {adj1}, {adj2}, {behavior} {animal}. </h2>
         </div>
     );
 }
@@ -106,10 +110,15 @@ function CompFormatTwo() {
     let ecosystemNum = randomNumberInRange(0, ecosystems.length-1);
     let beingNum = randomNumberInRange(0, mythicalBeings.length-1);
 
+    
+    let adj = <span class="random-words">{seedAdjectives[adjNum]}</span>;
+    let ecosystem = <span class="random-words">{ecosystems[ecosystemNum]}</span>;
+    let being = <span class="random-words">{mythicalBeings[beingNum]}</span>;
+
     return (
         <div>
             <h2 class='Comp-text'>
-                {user.name}, you {seedAdjectives[adjNum]}, {ecosystems[ecosystemNum]}-{mythicalBeings[beingNum]}. </h2>
+                {User.name}, you {adj}, {ecosystem}-{being}.</h2>
         </div>
     );
 }
@@ -120,11 +129,14 @@ function CompFormatThree() {
     let behaviorNum = randomNumberInRange(0, behaviors.length-1);
     let objNum = randomNumberInRange(0, inanimateObjects.length-1);
 
+    let adj = <span class="random-words">{seedAdjectives[adjNum]}</span>;
+    let behavior = <span class="random-words">{behaviors[behaviorNum]}</span>;
+    let obj = <span class="random-words">{inanimateObjects[objNum]}</span>;
+
     return (
         <div>
             <h2 class='Comp-text'>
-                {user.name}, you {seedAdjectives[adjNum]}, {behaviors[behaviorNum]}
-                  {inanimateObjects[objNum]} come to life. </h2>
+                {User.name}, you {adj}, {behavior} {obj} come to life. </h2>
         </div>
     );
 }
@@ -134,10 +146,15 @@ function CompFormatFour() {
     let adj1Num = randomNumberInRange(0, seedAdjectives.length-1);
     let adj2Num = randomNumberInRange(0, seedAdjectives.length-1);
 
+    
+    let adj1 = <span class="random-words">{seedAdjectives[adj1Num]}</span>;
+    let adj2 = <span class="random-words">{seedAdjectives[adj2Num]}</span>;
+    let profession = <span class="random-words">{User.profession}</span>;
+
     return (
         <div>
             <h2 class='Comp-text'>
-                {user.name}, you {seedAdjectives[adj1Num]}, {seedAdjectives[adj2Num]} {user.profession}. </h2>
+                {User.name}, you {adj1}, {adj2} {profession}. </h2>
         </div>
     );
 }
@@ -148,10 +165,14 @@ function CompFormatFive() {
     let adj2Num = randomNumberInRange(0, seedAdjectives.length-1);
     let flowerNum = randomNumberInRange(0, flowers.length-1);
 
+    let adj1 = <span class="random-words">{seedAdjectives[adj1Num]}</span>;
+    let adj2 = <span class="random-words">{seedAdjectives[adj2Num]}</span>;
+    let flower = <span class="random-words">{flowers[flowerNum]}</span>;
+
     return (
         <div>
             <h2 class='Comp-text'>
-                {user.name}, you {seedAdjectives[adj1Num]}, {seedAdjectives[adj2Num]} {flowers[flowerNum]}. </h2>
+                {User.name}, you {adj1}, {adj2} {flower}. </h2>
         </div>
     );
 }
@@ -161,9 +182,12 @@ function CompFormatSix() {
     let infuserNum = randomNumberInRange(0, infusers.length-1);
     let infuseeNum = randomNumberInRange(0, infusees.length-1);
 
+    let infuser = <span class="random-words">{infusers[infuserNum]}</span>;
+    let infusee = <span class="random-words">{infusees[infuseeNum]}</span>;
+
     return (
         <div>
-            <h2 class='Comp-text'>{user.name}, you {infusers[infuserNum]}-infused {infusees[infuseeNum]}. </h2>
+            <h2 class='Comp-text'>{User.name}, you {infuser}-infused {infusee}. </h2>
         </div>
     );
 }
@@ -173,11 +197,11 @@ function CompFormatSix() {
 //    Waffles are the <person> of breakfast foods.
 function CompFormatSeven() {
     let analogyCatNum = randomNumberInRange(0, analogyCategories.length-1);
-    let analogyKey = analogyCategories[analogyCatNum]
+    let analogyKey = analogyCategories[analogyCatNum];
 
     return (
         <div>
-            <h2 class='Comp-text'> {goodAnalogyPairs[analogyKey]} is the {user.name} of {analogyKey}. </h2>
+            <h2 class='Comp-text'> <span class="random-words">{goodAnalogyPairs[analogyKey]}</span> is the <span class="random-words">{User.name}</span> of <span class="random-words">{analogyKey}</span>. </h2>
         </div>
     );
 }
@@ -188,16 +212,13 @@ function CompFormatJerry() {
 
     return (
         <div>
-            <h2 class='Comp-text'> You got a Jerry GIF so no compliments here! <br/>
-                {badAnalogyPairs[analogyKey]} is the {user.name} of {analogyKey}. </h2>
+            <h2 class='Comp-text'> You got a Jerry GIF so here's an insult instead! <br/>
+            <span class="random-bad-words">{badAnalogyPairs[analogyKey]}</span> is the <span class="random-bad-words">{User.name}</span> of <span class="random-bad-words">{analogyKey}</span>. </h2>
         </div>
     );
 }
 
 function CompFormatJamm() {
-    let analogyCatNum = randomNumberInRange(0, analogyCategories.length-1);
-    let analogyKey = analogyCategories[analogyCatNum]
-
     return (
         <div>
             <h2 class='Comp-text'> You've been JAMMED! </h2>
@@ -206,12 +227,9 @@ function CompFormatJamm() {
 }
 
 function CompFormatApril() {
-    let analogyCatNum = randomNumberInRange(0, analogyCategories.length-1);
-    let analogyKey = analogyCategories[analogyCatNum]
-
     return (
         <div>
-            <h2 class='Comp-text'> You are the cross between Werner Herzog and Wednesday Addams that we've been waiting for. </h2>
+            <h2 class='Comp-text'> Keep trying... nothing to see here. </h2>
         </div>
     );
 }
@@ -219,6 +237,7 @@ function CompFormatApril() {
 function ComplimentGenerator() {
 
     let div_ = document.getElementById("compliment-container");
+    let genButton = document.getElementById("generate-button");
     if (div_ == undefined) {
         return (<p></p>)
     }
@@ -227,16 +246,22 @@ function ComplimentGenerator() {
     // The Jerry flow
     if (images[imgNum] == "jerry_gif.gif") {
         div_.style.background = BadRed;
+        genButton.innerText = "Try Again!";
+
         return(
             <CompFormatJerry />
         );
     } else if (images[imgNum] == "jamm_gif.gif") {
         div_.style.background = BadRed;
+        genButton.innerText = "Try Again!";
+        
         return(
             <CompFormatJamm />
         );
     } else if (images[imgNum] == "april_gif.gif") {
         div_.style.background = BadRed;
+        genButton.innerText = "Try Again!";
+        
         return(
             <CompFormatApril />
         );
@@ -244,6 +269,7 @@ function ComplimentGenerator() {
 
 
     div_.style.background = GoodGreen;
+    genButton.innerText = "Click to get compliment!";        
 
     switch(formatNum_) {
         case 0:
@@ -282,7 +308,7 @@ function SetImage() {
     cimg.name = require("./image_set/"+images[imgNum]);
 
     return(
-        <div className='column'>
+        <div class='column'>
           <img src={cimg.name} alt="img" />
         </div>
     );
@@ -298,19 +324,19 @@ export function BuildCompliment() {
     imgNum = randomNumberInRange(0, images.length-1);
 
     return (
-        <div className='Compliment-container' id="compliment-container">
-            <div className="column">
+        <div class='Compliment-container' id="compliment-container" >
+            <div class="column">
                 
                 <ComplimentGenerator />
                 <div>
-                    <button className="button" onClick={handleClick}>
-                        Generate compliment here!
+                    <button class="button" onClick={handleClick} id="generate-button">
+                        Click to get compliment!
                     </button>
                 </div>
 
             </div>
             
-            <div className="column">
+            <div class="column">
                 <SetImage />
             </div>
         </div>

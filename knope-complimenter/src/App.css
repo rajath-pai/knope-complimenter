@@ -55,6 +55,7 @@
   top: 20%;
   width: 900px;
   height: 600px;
+  background: rgba(25, 77, 51, 0.88);
 }
 
 .column {
@@ -125,16 +126,28 @@ img {
 }
 .Comp-text{
   color: white;
-  font-size: 40px;
-  max-width: 50vw;
+  font-size: 36px;
+  max-width: 53vw;
   max-height: 100vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Input-fields{
+  background: white;
+  max-width: 18vw;
+  max-height: 25vh;
+  position: absolute;
+  
+  height: 15vh;
+  align-items: center;
+  left: 10%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.random-words{
+  color: greenyellow;
+}
+
+.random-bad-words{
+  color: pink;
 }
